@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Phone, Linkedin, Github, Code, User, Briefcase, GraduationCap, Rocket, Menu, X, ExternalLink, Calendar, MapPin } from 'lucide-react';
+import { ChevronDown, Mail, Phone, Linkedin, Github, Code, User, Briefcase, GraduationCap, Rocket, Menu, X, ExternalLink, Calendar, MapPin, Download } from 'lucide-react';
 
 // Navigation Component
 const Navigation = () => {
@@ -159,7 +159,7 @@ const HeroSection = () => {
               download="Badr_Eddine_Toubani_Resume.pdf"
               className="contact-link"
             >
-              <Briefcase size={20} />
+              <Download size={20} />
               <span>Download Resume</span>
             </a>
           </div>
@@ -187,7 +187,7 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">About Me</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
         </div>
         
@@ -255,12 +255,25 @@ const SkillsSection = () => {
     {
       title: "Programming Languages",
       icon: "🔧",
-      skills: ["Java", "JavaScript", "Python", "PHP", "C", "C++"]
+      skills: ["Java", "JavaScript", "Kotlin ","Python", "PHP", "C", "C++"]
     },
     {
       title: "Tools & Technologies",
       icon: "🛠️",
-      skills: ["Maven", "Selenium", "Kafka", "Angular", "Arduino", "PHPRad"]
+      skills: [
+        "Maven",
+        "Selenium",
+        "Kafka",
+        "Angular",
+        "Arduino",
+        "PHPRad",
+        "GitLab CI",
+        "Postman",
+        "VS Code",
+        "IntelliJ IDEA",
+        "Jupyter Notebook",
+        "Google Colab"
+      ]
     }
   ];
 
@@ -268,7 +281,7 @@ const SkillsSection = () => {
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Technical Skills</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Technical Skills</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
         </div>
         
@@ -338,7 +351,7 @@ const ExperienceSection = () => {
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Experience</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Experience</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
         </div>
         
@@ -415,6 +428,12 @@ const ProjectsSection = () => {
       description: "Built a sports facility booking system using PHP, featuring reservation management, payment integration, and scheduling functionality.",
       technologies: ["PHP", "MySQL"],
       category: "Web Development"
+    },
+    {
+      title: "Task Manager Mobile App",
+      description: "Developed a mobile task manager application with Kotlin and Retrofit, enabling users to manage tasks efficiently with a modern Android interface.",
+      technologies: ["Kotlin", "Retrofit"],
+      category: "Mobile"
     }
   ];
 
@@ -422,7 +441,7 @@ const ProjectsSection = () => {
     <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Notable Projects</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Notable Projects</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
         </div>
         
@@ -460,7 +479,22 @@ const EducationSection = () => {
       degree: "Bachelor's Degree in Software Engineering (Bac +3)",
       school: "EST Fès (École Supérieure de Technologie)",
       year: "2025",
-      description: "Comprehensive software engineering program covering advanced programming concepts, software architecture, project management, and modern development methodologies."
+      description: (
+        <>
+          Comprehensive software engineering program covering advanced programming concepts, software architecture, project management, and modern development methodologies.
+          <br />
+          <span className="font-semibold text-blue-700">Key modules:</span>
+          <ul className="list-disc list-inside text-gray-700 mt-2">
+            <li>J2EE, Spring Framework</li>
+            <li>Network Design (Web Services, WebSocket, Brokers)</li>
+            <li>Design Patterns</li>
+            <li>IT Governance</li>
+            <li>Software Industry (DevOps)</li>
+            <li>Mobile Development (Android Studio)</li>
+            <li>Frontend Frameworks: SvelteKit, Angular, Next.js, Django, Flask, Astro</li>
+          </ul>
+        </>
+      )
     },
     {
       degree: "Digital Development Web Full Stack Specialized Technician Diploma (Bac +2)",
@@ -486,7 +520,7 @@ const EducationSection = () => {
     <section id="education" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Education & Certifications</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gray-900">Education & Certifications</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
         </div>
         
@@ -555,7 +589,7 @@ const ContactSection = () => {
             download="Badr_Eddine_Toubani_Resume.pdf" 
             className="cta-button"
           >
-            <Briefcase size={20} />
+            <Download size={20} />
             <span>Download Resume</span>
           </a>
           <a href="https://www.linkedin.com/in/badr-eddine-toubani-5b44361a4/" target="_blank" rel="noopener noreferrer" className="cta-button">
@@ -588,7 +622,7 @@ const App = () => {
         className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-3 rounded-full shadow-lg flex items-center gap-2 hover:scale-105 transition-transform font-semibold"
         title="Download Resume"
       >
-        <Briefcase size={20} />
+        <Download size={20} />
         <span className="hidden md:inline">Download Resume</span>
       </a>
 
