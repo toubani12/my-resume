@@ -314,11 +314,38 @@ const SkillsSection = () => {
 const ExperienceSection = () => {
   const experiences = [
     {
+      title: "Full Stack Developer (Freelance Remote)",
+      company: "ELECTRONIC SAV Remote",
+      period: "3 Months Jul 2025 – Present",
+      location: "Remote",
+      description: (
+        <>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>Developed a comprehensive e-commerce application from scratch, serving as a live demo for a repair service.</li>
+            <li>Engineered the Next.js frontend hosted on Vercel, and the <strong>Spring Boot</strong> backend deployed on AWS.</li>
+            <li>Implemented core e-commerce functionalities: robust order management, secure user authentication, responsive UI, and an admin panel.</li>
+            <li>Utilized Cloudinary for efficient image storage and Firebase for data persistence, ensuring scalability.</li>
+            <li>Designed and ensured full responsiveness for optimal user experience across all devices.</li>
+          </ul>
+          <p className="mt-2">Live Demo: <a href="https://electronic-sav.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">electronic-sav.vercel.app</a></p>
+        </>
+      ),
+      technologies: ["Next.js", "Spring Boot", "AWS", "Vercel", "Cloudinary", "Firebase"]
+    },
+    {
       title: "Full Stack Developer",
       company: "Freelance Client Project",
       period: "2025",
       location: "Remote",
-      description: "Created a complete repair service platform 'deppanageservices.com' using Next.js and Supabase. Implemented user authentication, service booking system, and responsive design for optimal user experience.",
+      description: (
+        <>
+          Created a complete repair service platform{' '}
+          <a href="https://depannageservices.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+            depannageservices.com
+          </a>{' '}
+          using Next.js and Supabase. Implemented user authentication, service booking system, and responsive design for optimal user experience.
+        </>
+      ),
       technologies: ["Next.js", "Supabase", "React"]
     },
     {
@@ -374,7 +401,7 @@ const ExperienceSection = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4">{exp.description}</p>
+              <div className="text-gray-700 mb-4">{exp.description}</div>
               <div className="flex flex-wrap gap-2">
                 {exp.technologies.map((tech, techIndex) => (
                   <span key={techIndex} className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
@@ -536,7 +563,7 @@ const EducationSection = () => {
                   {edu.year}
                 </span>
               </div>
-              <p className="text-gray-700">{edu.description}</p>
+              <div className="text-gray-700">{edu.description}</div>
             </div>
           ))}
         </div>
